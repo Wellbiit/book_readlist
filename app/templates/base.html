@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book`s list</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+<ul class="navbar">
+    <li><a class="link" href="{{ url_for('add_book') }}">Add book</a></li>
+    <li><a class="link" href="{{ url_for('book_test') }}">Book`s list</a></li>
+    <li><a class="link" href="{{ url_for('add_topic') }}">Add topic</a></li>
+</ul>
+{% block content %}
+{% endblock %}
+</body>

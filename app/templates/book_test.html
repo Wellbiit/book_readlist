@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="{{ url_for('book_test') }}" method="post">
+    <h1>Book`s Readlist</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Language</th>
+        </tr>
+        <td>{{all_data['title']}}</td>
+        <td>{{all_data['author']}}</td>
+        <td>{{all_data['genre']}}</td>
+        <td>{{all_data['language']}}</td>
+    </table>
+    <style>
+    table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+        }
+    td {
+            background-color: #E4F5D4;
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            font-weight: lighter;
+        }
+    </style>
+</form>
+
+{% endblock %}

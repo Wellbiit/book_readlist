@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="add_topic" method="post">
+    <label for="topic">Enter name of new topic</label>
+    <input type="text" id="topic" name="topic" placeholder="Enter here">
+    <input type="submit" value="ADD">
+</form>
+<div class="tables_list">
+    {% for topic in all_topics %}
+        <a href="/book_test/{{ topic }}">{{ topic }}</a>
+        <a href="/remove_table/{{ topic }}">Delete</a><br>
+    {% endfor %}
+</div>
+
+{% endblock %}
